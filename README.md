@@ -1,3 +1,7 @@
+![GitHub Repo stars](https://img.shields.io/github/stars/fine-seat/hm-typst-template?color=fb5454)
+![GitHub Release](https://img.shields.io/github/v/release/fine-seat/hm-typst-template?color=fb5454)
+
+
 # scribbling-hm
 
 Unofficial computer science Bachelor's thesis template for Munich University of Applied Sciences (Hochschule München).

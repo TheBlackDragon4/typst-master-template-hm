@@ -65,6 +65,11 @@
     region: lang,
   )
 
+  set list(
+    tight: false,
+    indent: 10pt
+  )
+
   show: make-glossary
 
   // titlepage

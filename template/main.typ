@@ -1,4 +1,5 @@
-#import "@preview/scribbling-hm:0.1.4": *
+// #import "@preview/scribbling-hm:0.1.4": *
+#import "../lib.typ": *
 
 #import "abbreviations.typ": abbreviations-list
 #import "variables.typ": variables-list
@@ -31,3 +32,13 @@
 This @typst @typst_doc formatting is defined in the variables list. It is processed by a @cpu. Another sentence using @cpu. #footnote[A third @cpu sentence maybe?]
 
 #todo[Mehr Text]
+
+Bullet points are indented by default:
+
+- first
+- second
+  - first
+  - second
+- third
+
+#lorem(20)
