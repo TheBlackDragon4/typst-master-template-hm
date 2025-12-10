@@ -42,3 +42,6 @@ Bullet points are indented by default:
 - third
 
 #lorem(20)
+
+= Another Section
+#lorem(40)

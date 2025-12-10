@@ -199,7 +199,11 @@
     it
   }
 
+  show heading.where(level: 1): set heading(numbering: "1")
+
   body
+
+  show heading.where(level: 1): set heading(numbering: none)
 
   set page(header: none)
 
