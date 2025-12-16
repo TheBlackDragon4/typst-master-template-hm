@@ -72,6 +72,13 @@
 
   show: make-glossary
 
+  show: zebraw.with(
+    background-color: rgb(251, 251, 251, 255),
+    numbering-separator: true,
+    lang-color: hm-color.lighten(50%)
+  )
+  show raw.where(block: true): set text(0.9em)
+
   // titlepage
   import "components/titlepage.typ": titlepage
 

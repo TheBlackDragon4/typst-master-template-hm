@@ -1,5 +1,6 @@
 #import "@preview/glossarium:0.5.9": *
 #import "@preview/datify:1.0.0": *
+#import "@preview/zebraw:0.6.1": *
 
 #let todo(it) = [
   #context {
@@ -9,3 +10,5 @@
     ]
   }
 ]
+
+#let hm-color = rgb("#fb5454")

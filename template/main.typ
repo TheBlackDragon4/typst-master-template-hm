@@ -1,4 +1,5 @@
-#import "@preview/scribbling-hm:0.1.5": *
+// #import "@preview/scribbling-hm:0.1.5": *
+#import "../lib.typ": *
 
 #import "abbreviations.typ": abbreviations-list
 #import "variables.typ": variables-list
@@ -41,6 +42,15 @@ Bullet points are indented by default:
 - third
 
 #lorem(20)
+
+#figure(
+  ```rust
+  fn main() {
+      println!("Hello World!");
+  }
+  ```,
+  caption: ["Hello World" in Rust]
+)
 
 = Another Section
 #lorem(40)
