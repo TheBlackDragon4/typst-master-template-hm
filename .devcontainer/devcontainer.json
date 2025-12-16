@@ -4,5 +4,8 @@
 	    "ghcr.io/michidk/devcontainers-features/typst:1": {}
 	},
 	"postCreateCommand": "bash .devcontainer/post-create.sh",
-	"postAttachCommand": "git config --global --unset http.sslcainfo || true"
+	"postAttachCommand": "git config --global --unset http.sslcainfo || true",
+	"mounts": [
+		"source=${localWorkspaceFolder}/.devcontainer/.config,target=/home/vscode/.config,type=bind"
+	]
 }
