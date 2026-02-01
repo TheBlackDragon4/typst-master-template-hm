@@ -41,6 +41,14 @@ Bullet points are indented by default:
   - second
 - third
 
+Numbered lists too:
+
++ first
++ second
+  + first
+  + second
++ third
+
 #lorem(20)
 
 #figure(

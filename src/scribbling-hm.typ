@@ -46,10 +46,10 @@
 
   // draft-based accents
   set cite(
-    style: if draft {"springer-basic-author-date"} else {"ieee"}
+    style: if draft { "springer-basic-author-date" } else { "ieee" },
   )
-  show cite: set text(fill: if draft {orange} else {black})
-  show footnote: set text(fill: if draft {purple} else {black})
+  show cite: set text(fill: if draft { orange } else { black })
+  show footnote: set text(fill: if draft { purple } else { black })
   // ---
 
   set par(
@@ -58,7 +58,12 @@
 
   show heading.where(level: 1): set block(below: 0.5cm)
   show heading.where(level: 2): set block(below: 0.5cm)
-  show heading.where(level: 3): set block(below: 0.5cm)
+  show heading.where(level: 3): it => {
+    set block(below: 0.5cm)
+    set text(size: 1.1em)
+    it
+  }
+  show heading.where(level: 5): set text(weight: "semibold")
 
   set text(
     lang: lang,
@@ -66,6 +71,11 @@
   )
 
   set list(
+    tight: false,
+    indent: 10pt
+  )
+
+  set enum(
     tight: false,
     indent: 10pt
   )
@@ -206,7 +216,24 @@
     it
   }
 
-  show heading.where(level: 1): set heading(numbering: "1")
+  show heading.where(level: 1): set heading(numbering: "1",)
+  show heading.where(level: 2): set heading(numbering: "1.1")
+  show heading.where(level: 3): set heading(numbering: "1.1.1")
+  show heading.where(level: 4): set heading(numbering: "1.1.1.1")
+  show heading: set heading(supplement: [Kapitel])
+
+  let variables-keys = variables-list.map(e => e.key).filter(k => k != none).dedup()
+  show link: it => {
+    if (type(it.dest) == str) {
+      it
+    } else {
+      if (variables-keys.any(k => repr(it.dest).contains(k))) {
+        it.body
+      } else {
+        it
+      }
+    }
+  }
 
   body
 
@@ -223,14 +250,8 @@
 
   heading([Abkürzungsverzeichnis], level: 1)
 
-  print-glossary(abbreviations-list, deduplicate-back-references: true)
+  print-glossary(abbreviations-list, deduplicate-back-references: true, shorthands: ("plural", "capitalize", "capitalize-plural", "short", "long", "longplural"))
 
   bib
 
-  show link: it => {
-    let ref = str(it.dest)
-    if variables-list.any(v => v.key == ref) {
-      it.body
-    } else { it }
-  }
 }
