@@ -1,21 +1,20 @@
-![GitHub Repo stars](https://img.shields.io/github/stars/fine-seat/hm-typst-template?color=fb5454)
-![GitHub Release](https://img.shields.io/github/v/release/fine-seat/hm-typst-template?color=fb5454)
+![GitHub Repo stars](https://github.com/TheBlackDragon4/typst-master-template-hm.git?color=fb5454)
+![GitHub Release](https://github.com/TheBlackDragon4/typst-master-template-hm.git?color=fb5454)
 
 
 # typst-master-template-hm
 
 Unofficial computer science Master's thesis template for Munich University of Applied Sciences (Hochschule München). This template is a fork of [hm-typst-templage](https://github.com/fine-seat/hm-typst-template). Adjustments are made and taken from the official LaTeX thesis template of the SecLab at the Munich University of Applied Sciences. 
 
-<!-- The installation area in the typst web app still needs to be adjusted.
+The installation area in the typst web app still needs to be adjusted.
 ## Installation
-You can use this template in the Typst web app by clicking "Start from template" on the dashboard and searching for ``scribbling-hm``.
+You can use this template in the Typst web app by clicking "Start from template" on the dashboard and searching for ``typst-master-template-hm``.
 
 Alternatively, you can use the CLI to initialize this project using the command:
 
 ```bash
-typst init @preview/scribbling-hm
+typst init @preview/typst-master-template-hm
 ```
---->
 
 ## Usage
 1. Open the ``main.typ`` file.
