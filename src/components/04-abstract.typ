@@ -1,4 +1,4 @@
-#import "../utils.typ": *
+#import "../libs/utils.typ": *
 
 #let abstract-page(
   two-langs: true,

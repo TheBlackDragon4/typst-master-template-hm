@@ -1,4 +1,4 @@
-#import "../utils.typ": *
+#import "../libs/utils.typ": *
 
 #let titlepage(
   title: none,
@@ -24,7 +24,7 @@
     #text(size: 14.4pt)[
     #department]
 
-    #image("../media/HM_logo-small.png", width: 45%)
+    #image("../assets/HM_logo-small.png", width: 45%)
 
     #v(1cm)
 

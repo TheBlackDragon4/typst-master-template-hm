@@ -1,4 +1,4 @@
-#import "../utils.typ": *
+#import "../libs/utils.typ": *
 
 #let acknowledgments(
   title: "Danksagung",
@@ -20,7 +20,7 @@
     Ich möchte, dass diese Vorlage für so viele großartige Abschlussarbeiten wie möglich verwendet wird.
     Daher muss diese Vorlage bekannt gemacht werden.
     Bitte erzählen Sie Ihren Kollegen und Betreuern davon.
-Vielen Dank für Ihre Hilfe!
+    Vielen Dank für Ihre Hilfe!
   ]
   
   pagebreak()
