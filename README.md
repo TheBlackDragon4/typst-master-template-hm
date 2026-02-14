@@ -1,5 +1,5 @@
-![GitHub Repo stars](https://img.shields.io/github/stars/TheBlackDragon4/typst-master-template-hm.git?color=fb5454)
-![GitHub Release](https://img.shields.io/github/v/release/TheBlackDragon4/typst-master-template-hm.git?color=fb5454)
+![GitHub Repo stars](https://img.shields.io/github/stars/TheBlackDragon4/typst-master-template-hm?color=fb5454)
+![GitHub Release](https://img.shields.io/github/v/release/TheBlackDragon4/typst-master-template-hm?color=fb5454)
 
 
 # typst-master-template-hm
@@ -28,6 +28,9 @@ typst init @preview/typst-master-template-hm
 |----------|-------------|
 | `title` | The title of your thesis |
 | `title-translation` | English translation of the title |
+|`university`| The university name |
+|`department`| The department name |
+|`city`| The city where the university is located |
 | `course-of-study` | Your course of study |
 | `author` | Your full name |
 | `gender` | Your gender |
