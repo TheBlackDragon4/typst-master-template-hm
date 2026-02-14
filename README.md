@@ -1,5 +1,5 @@
-![GitHub Repo stars](https://github.com/TheBlackDragon4/typst-master-template-hm.git?color=fb5454)
-![GitHub Release](https://github.com/TheBlackDragon4/typst-master-template-hm.git?color=fb5454)
+![GitHub Repo stars](https://img.shields.io/github/stars/TheBlackDragon4/typst-master-template-hm.git?color=fb5454)
+![GitHub Release](https://img.shields.io/github/v/release/TheBlackDragon4/typst-master-template-hm.git?color=fb5454)
 
 
 # typst-master-template-hm
