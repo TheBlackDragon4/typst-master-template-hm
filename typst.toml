@@ -1,12 +1,12 @@
 [package]
-name = "scribbling-hm"
-version = "0.1.5"
+name = "typst-master-template-hm"
+version = "0.1.0"
 entrypoint = "lib.typ"
-authors = ["stefanie <@fine-seat>"]
+authors = ["Alexander <@TheBlackDragon4>"]
 license = "MIT"
-description = "Unofficial Bachelor's thesis template for Munich University of Applied Sciences (Hochschule München)"
-repository = "https://github.com/fine-seat/hm-typst-template"
-keywords = ["HM", "München", "Munich", "Hochschule München", "Hochschule München für Angewandte Wissenschaften", "Munich University of Applied Sciences", "thesis", "bachelor's thesis"]
+description = "Unofficial Master's thesis template for Munich University of Applied Sciences (Hochschule München)"
+repository = "https://github.com/TheBlackDragon4/typst-master-template-hm.git"
+keywords = ["HM", "München", "Munich", "Hochschule München", "Hochschule München für Angewandte Wissenschaften", "Munich University of Applied Sciences", "thesis", "master's thesis"]
 categories = ["thesis"]
 disciplines = ["computer-science"]
 exclude = [".devcontainer/"]
