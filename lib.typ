@@ -1,1 +1,1 @@
-#import "src/scribbling-hm.typ": *
+#import "src/libs/typst-master-template-hm.typ": *
