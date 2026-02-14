@@ -1,12 +1,13 @@
 // #import "@preview/scribbling-hm:0.1.5": *
-#import "@preview/charged-ieee:0.1.4": ieee
+#import "glossary.typ" : glossary
 
 #set text(lang: "de", size: 12pt, region: "de")
 #set par(justify: true)
 #set page("a4")
+
 #import "../lib.typ": *
 
-#import "abbreviations.typ": abbreviations-list
+#import "glossary.typ": glossary
 #import "variables.typ": variables-list
 
 #show: thesis.with(
@@ -31,116 +32,21 @@ for Cloud Based Applications",
   gender: "w",
   supervisor-gender: "m",
   bib: bibliography("references.bib", title: "Literaturverzeichnis"),
-  abbreviations-list: abbreviations-list,
+  glossary: glossary,
   variables-list: variables-list,
-  draft: false,
+  draft: true,
   appendix: [
     == Anhang A: Lorem ipsum 1
-    #lorem(250)
+    #lorem(100)
     
     == Anhang B: Lorem ipsum 2
-    #lorem(250)
+    #lorem(100)
   ],
 )
 
-= Einleitung
-#lorem(100)
-
-== Motivation
-#lorem(80)
-
-== Zielsetzung
-#lorem(60)
-
-= Grundlagen
-#lorem(120)
-
-== Technischer Hintergrund
-This @typst @typst_doc formatting is defined in the variables list. It is processed by a @cpu. Another sentence using @cpu. #footnote[A third @cpu sentence maybe?]
-
-#lorem(50)
-
-== Stand der Forschung
-#lorem(90)
-
-Bullet points are indented by default:
-
-- first
-- second
-  - first
-  - second
-- third
-
-Numbered lists too:
-
-+ first
-+ second
-  + first
-  + second
-+ third
-
-= Methodik
-#lorem(100)
-
-== Implementierung
-#lorem(70)
-
-#figure(
-  ```rust
-  fn main() {
-      println!("Hello World!");
-  }
-  ```,
-  caption: ["Hello World" in Rust]
-)
-
-#lorem(40)
-
-// Beispiel für eine Tabelle
-#figure(
-  table(
-    columns: (auto, 1fr, 1fr, 1fr),
-    align: (left, center, center, center),
-    stroke: 0.5pt,
-    fill: (col, row) => if row == 0 { gray.lighten(60%) },
-    [*Method*], [*Accuracy*], [*Time (ms)*], [*Storage (MB)*],
-    [Algorithmus A], [94.2%], [150], [512],
-    [Algorithmus B], [96.8%], [230], [768],
-    [Algorithmus C], [91.5%], [95], [384],
-    [Baseline], [88.0%], [80], [256],
-  ),
-  caption: [Vergleich verschiedener Algorithmen]
-) <tab:algorithmen>
-
-#lorem(30)
-
-// Example of an image
-#figure(
-  image("../src/media/HM_logo.png", width: 60%),
-  caption: [Example picture - HM Logo]
-) <fig:architektur>
-
-In @tab:algorithmen sehen wir einen Vergleich der verschiedenen Algorithmen. Ein Beispielbild ist in @fig:architektur zu sehen.
-
-#lorem(20)
-
-== Evaluierung
-#lorem(80)
-
-= Ergebnisse
-#lorem(150)
-
-== Analyse
-#lorem(90)
-
-== Diskussion
-#lorem(100)
-
-= Zusammenfassung und Ausblick
-#lorem(80)
-
-== Zusammenfassung
-#lorem(60)
-
-== Ausblick
-#lorem(50)
+#include("../template/example_usage.typ")
+#include("../src/components/10-Introduction.typ")
+// #include("../src/components/20-fundamentals.typ")
+// #include("../src/components/30-methodology.typ")
+// #include("../src/components/40-results.typ")
+// #include("../src/components/50-summary-and-outlook.typ")
