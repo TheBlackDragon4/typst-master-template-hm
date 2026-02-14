@@ -7,8 +7,12 @@
   gender: none,
   student-id: none,
   birth-date: none,
+  university: "",
+  department: "",
+  city: "",
   study-group: "",
   semester: "",
+  focus: none,
   supervisors: none,
   supervisor-gender: none,
   submission-date: none,
@@ -22,6 +26,7 @@
   abbreviations-list: none,
   course-of-study: none,
   variables-list: none,
+  appendix: none,
   body,
 ) = {
   if gender != none and gender not in ("m", "w", "d") {
@@ -40,8 +45,15 @@
   set page(
     paper: "a4",
     margin: 2.5cm,
-    number-align: right,
     binding: left,
+    footer: context {
+      let page-numbering = page.numbering
+      if page-numbering != none [
+        #line(length: 100%, stroke: 0.05em)
+        #v(-0.5em)
+        #align(right, counter(page).display(page-numbering))
+      ]
+    },
   )
 
   // draft-based accents
@@ -90,11 +102,14 @@
   show raw.where(block: true): set text(0.9em)
 
   // titlepage
-  import "components/titlepage.typ": titlepage
+  import "components/00-titlepage.typ": titlepage
 
   titlepage(
     title: title,
     title-translation: title-translation,
+    university: university,
+    department: department,
+    city: city,
     author: author,
     supervisors: supervisors,
     date: custom-date-format(submission-date, lang: lang, pattern: "long"),
@@ -110,7 +125,7 @@
 
   // blocking notice
   if blocking {
-    import "components/blocking.typ": blocking-notice
+    import "components/01-blocking.typ": blocking-notice
 
     blocking-notice(
       gender: gender,
@@ -123,7 +138,7 @@
 
   // declaration of independent writing
 
-  import "components/declaration.typ": declaration
+  import "components/02-declaration.typ": declaration
 
   declaration(
     submission-date: custom-date-format(submission-date, lang: lang, pattern: "long"),
@@ -133,8 +148,18 @@
     study-group: study-group,
     birth-date: if (birth-date != none) { custom-date-format(birth-date, lang: lang, pattern: "dd.MM.yyyy") },
   )
-
+  
   pagebreak()
+  
+  // ---
+
+  // acknowledgments 
+  import "components/03-acknowledgments.typ": acknowledgments
+
+  acknowledgments(
+    title: "Danksagung",
+  )
+  // -- acknowledgments 
 
   // ---
 
@@ -143,14 +168,8 @@
   )
   counter(page).update(1)
 
-  // toc
-  import "components/outline.typ": outline-page
-
-  outline-page()
-  // -- toc
-
-  // abstract
-  import "components/abstract.typ": abstract-page
+ // abstract
+  import "components/04-abstract.typ": abstract-page
 
   abstract-page(
     two-langs: abstract-two-langs,
@@ -158,6 +177,12 @@
     abstract-translation: abstract-translation,
   )
   // -- abstract
+
+  // toc
+  import "outline.typ": outline-page
+
+  outline-page()
+  // -- toc
 
   set page(
     numbering: "1",
@@ -237,21 +262,22 @@
 
   body
 
-  show heading.where(level: 1): set heading(numbering: none)
+  show heading: set heading(numbering: none)
 
   set page(header: none)
 
   pagebreak()
-
-  set page(
-    numbering: "I",
-  )
-  counter(page).update(1)
 
   heading([Abkürzungsverzeichnis], level: 1)
 
   print-glossary(abbreviations-list, deduplicate-back-references: true, shorthands: ("plural", "capitalize", "capitalize-plural", "short", "long", "longplural"))
 
   bib
+
+  if appendix != none {
+    pagebreak()
+    heading([Anhang], level: 1)
+    appendix
+  }
 
 }
