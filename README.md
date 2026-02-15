@@ -22,6 +22,8 @@ typst init @preview/typst-master-template-hm
 3. Write the content at the bottom of the file.
 4. Compile.
 
+**Important:** Before final submission, set `draft: false` in the template configuration. This removes draft watermarks, colored citations/footnotes, and TODO markers.
+
 ### Properties
 
 | Property | Description |
@@ -38,7 +40,8 @@ typst init @preview/typst-master-template-hm
 | `birth-date` | Your date of birth (optional) |
 | `study-group` | Your study group |
 | `semester` | Current semester |
-| `supervisors` | Array of supervisor names or single supervisor name |
+| `supervisors1` | Name of main supervisor |
+| `supervisors2` | Name of second supervisor |
 | `supervisor-gender` | Gender of supervisor |
 | `submission-date` | Date of thesis submission |
 | `abstract-two-langs` | Enable bilingual abstract (default: true) |
