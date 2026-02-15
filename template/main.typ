@@ -1,9 +1,9 @@
 // #import "@preview/scribbling-hm:0.1.5": *
 #import "glossary.typ" : glossary
 
-#set text(lang: "de", size: 12pt, region: "de")
-#set par(justify: true)
-#set page("a4")
+// #set text(lang: "de", size: 12pt, region: "de")
+// #set par(justify: true)
+// #set page("a4")
 
 #import "../lib.typ": *
 
@@ -11,8 +11,7 @@
 #import "variables.typ": variables-list
 
 #show: thesis.with(
-  title: "Distributed Real-Time Java
-for Cloud Based Applications",
+  title: "HM Template für Typst",
   title-translation: "",
   university: "Hochschule für angewandte Wissenschaften",
   department: "Fakultät für Informatik und Mathematik",
@@ -21,7 +20,8 @@ for Cloud Based Applications",
   submission-date: datetime.today(),
   student-id: 12345678,
   author: "Erika Mustermann",
-  supervisors: "Prof. Dr. Max Mustermann",
+  supervisors1: "Prof. Dr. Max Mustermann",
+  supervisors2: "Prof. Dr. Anna Musterfrau", 
   semester: "WiSe 2025/26",
   study-group: "IF7",
   birth-date: datetime(year: 2000, day: 1, month: 1),
@@ -36,11 +36,7 @@ for Cloud Based Applications",
   variables-list: variables-list,
   draft: true,
   appendix: [
-    == Anhang A: Lorem ipsum 1
-    #lorem(100)
-    
-    == Anhang B: Lorem ipsum 2
-    #lorem(100)
+    #include("../src/components/99-appendix.typ")
   ],
 )
 
