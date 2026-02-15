@@ -13,7 +13,8 @@
   study-group: "",
   semester: "",
   focus: none,
-  supervisors: none,
+  supervisors1: none,
+  supervisors2: none,
   supervisor-gender: none,
   submission-date: none,
   abstract-two-langs: true,
@@ -58,10 +59,10 @@
 
   // draft-based accents
   set cite(
-    style: if draft { "springer-basic-author-date" } else { "ieee" },
+    style: "ieee",
   )
-  show cite: set text(fill: if draft { orange } else { black })
-  show footnote: set text(fill: if draft { purple } else { black })
+  // show cite: set text(fill: if draft { orange } else { black })
+  // show footnote: set text(fill: if draft { purple } else { black })
   // ---
 
   set par(
@@ -111,7 +112,8 @@
     department: department,
     city: city,
     author: author,
-    supervisors: supervisors,
+    supervisors1: supervisors1,
+    supervisors2: supervisors2,
     date: custom-date-format(submission-date, lang: lang, pattern: "long"),
     id: student-id,
     gender: gender,
@@ -183,7 +185,7 @@
 
   heading([Glossar], level: 1)
 
-  print-glossary(glossary, deduplicate-back-references: true, shorthands: ("plural", "capitalize", "capitalize-plural", "short", "long", "longplural"))
+  print-glossary(glossary, disable-back-references: true, shorthands: ("plural", "capitalize", "capitalize-plural", "short", "long", "longplural"))
   
   pagebreak()
   // -- glossar
@@ -226,6 +228,11 @@
         }
 
         if current-heading != none {
+          let heading-counter = counter(heading).at(current-heading.location())
+          if heading-counter.len() > 0 {
+            numbering("1", ..heading-counter)
+            [ ]
+          }
           current-heading.body
           h(1fr)
           if draft {
