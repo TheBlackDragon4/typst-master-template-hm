@@ -9,7 +9,8 @@
   date: none,
   author: none,
   id: none,
-  supervisors: none,
+  supervisors1: none,
+  supervisors2: none,
   course-of-study: none,
   gender: none,
   supervisor-gender: none,
@@ -86,15 +87,25 @@
       } else {
         [Betreuende Person:]
       },
-      if (supervisors != none) {
-        if type(supervisors) == array {
-          supervisors.join(", ")
+      [
+        #if (supervisors1 != none) {
+          if type(supervisors1) == array {
+            supervisors1.join(", ")
+          } else {
+            supervisors1
+          }
         } else {
-          supervisors
+          todo[Betreuer]
         }
-      } else {
-        todo[Betreuer]
-      },
+        
+        #if (supervisors2 != none) {
+          if type(supervisors2) == array {
+            supervisors2.join(", ")
+          } else {
+            supervisors2
+          }
+        }
+      ],
     )
   )
   pagebreak()
