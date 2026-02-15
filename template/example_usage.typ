@@ -1,6 +1,6 @@
 
 = Template Usage
-Small guide on how to use the template and its features.
+Small guide on how to use the template and its features to write a thesis in the @hm.
 
 == Using Abbreviations and Variables
 
@@ -42,6 +42,8 @@ Other supported languages:
   ```,
   caption: [Example of Rust Code]
 )
+
+#pagebreak()
 
 == Tables
 
@@ -109,6 +111,8 @@ Numbered lists:
 
 An example image can be seen in @fig:architecture.
 
+#pagebreak()
+
 == Mathematical Formulas
 
 Inline math: The formula $E = m c^2$ is well known.
@@ -157,6 +161,14 @@ The template consists of several components:
 - `02-declaration.typ` - Declaration of authorship
 - `03-acknowledgments.typ` - Acknowledgments
 - `04-abstract.typ` - Abstract
+- `glossary.typ` - Glossary
 - `outline.typ` - Table of contents
+- `10-Introduction.typ` - Introduction chapter
+- `20-fundamentals.typ` - Fundamentals chapter
+- `30-methodology.typ` - Methodology chapter
+- `40-results.typ` - Results chapter
+- `50-summary-and-outlook.typ` - Summary and outlook chapter
+- `99-appendix.typ` - Appendix
+
 
 
