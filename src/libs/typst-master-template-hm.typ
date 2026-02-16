@@ -179,6 +179,33 @@
     abstract-translation: abstract-translation,
   )
   // -- abstract
+  
+  // list of figures
+  heading([Abbildungsverzeichnis], level: 1)
+  outline(
+    title: none,
+    target: figure.where(kind: image),
+  )
+  pagebreak()
+  // -- list of figures
+
+  // list of tables
+  heading([Tabellenverzeichnis], level: 1)
+  outline(
+    title: none,
+    target: figure.where(kind: table),
+  )
+  pagebreak()
+  // -- list of tables
+
+  // list of code
+  heading([Codeverzeichnis], level: 1)
+  outline(
+    title: none,
+    target: figure.where(kind: raw),
+  )
+  pagebreak()
+  // -- list of code
 
   // glossar
   register-glossary(glossary)
