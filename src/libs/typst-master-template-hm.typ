@@ -179,7 +179,13 @@
     abstract-translation: abstract-translation,
   )
   // -- abstract
-  
+
+  // toc
+  import "../libs/outline.typ": outline-page
+
+  outline-page()
+  // -- toc
+
   // list of figures
   heading([Abbildungsverzeichnis], level: 1)
   outline(
@@ -216,12 +222,6 @@
   
   pagebreak()
   // -- glossar
-
-  // toc
-  import "../libs/outline.typ": outline-page
-
-  outline-page()
-  // -- toc
 
   set page(
     numbering: "1",
