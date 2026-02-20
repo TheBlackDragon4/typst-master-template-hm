@@ -201,6 +201,7 @@
     title: none,
     target: figure.where(kind: table),
   )
+  show figure.where(kind: table): set block(breakable: true)
   pagebreak()
   // -- list of tables
 
