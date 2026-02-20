@@ -17,6 +17,7 @@
   department: "Fakultät für Informatik und Mathematik",
   city: "München",
   course-of-study: "Informatik",
+  study-focus: "Visual Computing und Künstliche Intelligenz",
   submission-date: datetime.today(),
   student-id: 12345678,
   author: "Erika Mustermann",

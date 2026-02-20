@@ -10,6 +10,8 @@
   university: "",
   department: "",
   city: "",
+  course-of-study: none,
+  study-focus: none,
   study-group: "",
   semester: "",
   focus: none,
@@ -25,7 +27,6 @@
   draft: true,
   bib: none,
   glossary: none,
-  course-of-study: none,
   variables-list: none,
   appendix: none,
   body,
@@ -111,6 +112,8 @@
     university: university,
     department: department,
     city: city,
+    course-of-study: course-of-study,
+    study-focus: study-focus,
     author: author,
     supervisors1: supervisors1,
     supervisors2: supervisors2,
@@ -119,7 +122,6 @@
     gender: gender,
     supervisor-gender: supervisor-gender,
     draft: draft,
-    course-of-study: course-of-study,
     date-today: custom-date-format(datetime.today(), lang: lang, pattern: "long"),
   )
 

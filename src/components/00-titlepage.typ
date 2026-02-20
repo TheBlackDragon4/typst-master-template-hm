@@ -6,12 +6,13 @@
   university: none,
   department: none,
   city: none,
+  course-of-study: none,
+  study-focus: none,
   date: none,
   author: none,
   id: none,
   supervisors1: none,
   supervisors2: none,
-  course-of-study: none,
   gender: none,
   supervisor-gender: none,
   draft: true,
@@ -30,7 +31,7 @@
     #v(1cm)
 
     #text(size: 14.4pt)[Masterarbeit \ zur Erlangung des akademischen Grades \ Master of Science \
-    im Studiengang #course-of-study]
+    im Studiengang #course-of-study \ Schwerpunk: #study-focus]
 
     #v(1cm)
 
