@@ -50,34 +50,47 @@ Other supported languages:
 For tables, you can use Typst's standard `table` function:
 
 #figure(
+  placement: none,
   table(
     columns: (auto, 1fr, 1fr),
-    align: (left, left, left),
+    align: left,
     stroke: 0.5pt,
     fill: (col, row) => if row == 0 { gray.lighten(60%) },
-    table.header([*Platform*], [*Adapter*], [*Data*]),
-    [Drone], [
+    table.header(
+      [*Platform*], [*Adapter*], [*Data*]
+    ),
+
+    [Drone], 
+    [
       - WiFi
       - LTE
-    ], [
+    ], 
+    [
       - Mission data
       - Camera feed
       - Flight information
     ],
-    [Car], [
+
+    [Car], 
+    [
       - LTE
-    ], [
+    ], 
+    [
       - Route information
       - Maintenance data
     ],
-    [Truck], [
+    
+    [Truck], 
+    [
       - LoRaWAN
       - LTE
-    ], [
+    ], 
+    [
       - Driving & rest times
       - Loading information
       - Maintenance data
     ],
+    
   ),
   caption: [Example table with different platforms]
 ) <tab:platforms>
