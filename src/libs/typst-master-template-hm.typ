@@ -40,7 +40,8 @@
 
   let lang = "de"
   let size = 12pt
-  set text(size: size, lang: lang, region: lang)
+  let font = "Times New Roman"
+  // let font = "Inria Serif"
 
   state("draft", draft).update(draft)
 
@@ -84,6 +85,8 @@
   set text(
     lang: lang,
     region: lang,
+    size: size, 
+    font: font,
   )
 
   set list(
