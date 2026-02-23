@@ -39,6 +39,8 @@
   }
 
   let lang = "de"
+  let size = 12pt
+  set text(size: size, lang: lang, region: lang)
 
   state("draft", draft).update(draft)
 
