@@ -1,10 +1,6 @@
 // #import "@preview/scribbling-hm:0.1.5": *
 #import "glossary.typ" : glossary
 
-// #set text(lang: "de", size: 12pt, region: "de")
-// #set par(justify: true)
-// #set page("a4")
-
 #import "../lib.typ": *
 
 #import "glossary.typ": glossary
@@ -47,3 +43,4 @@
 // #include("../src/components/30-methodology.typ")
 // #include("../src/components/40-results.typ")
 // #include("../src/components/50-summary-and-outlook.typ")
+
